@@ -1,0 +1,6 @@
+{% extends "daisy/templates/index.html" %}
+
+{% block content %}
+{% set file = load_data(path="../README.md") -%}
+{{ file | markdown | safe }}
+{% endblock %}
